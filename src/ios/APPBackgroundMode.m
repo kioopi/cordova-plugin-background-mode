@@ -52,7 +52,7 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
 {
     enabled = NO;
     [self configureAudioPlayer];
-    [self configureAudioSession];
+//    [self configureAudioSession];
     [self observeLifeCycle];
 }
 
@@ -138,7 +138,7 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
         [self fireEvent:kAPPBackgroundEventDeactivate];
     }
 
-    [audioPlayer pause];
+    [audioPlayer stop];
 }
 
 /**
